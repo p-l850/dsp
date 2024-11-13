@@ -6,7 +6,7 @@ def ff1(x):
     for k in range (N):
         a=0
         for n in range (l):
-            a=np.exp((-j*np.pi*n*k)/N)
+            a=np.exp((-2j*np.pi*n*k)/N)
             W.append(a)
     w=np.array(w).reshape(l,l)
     x1=np.dot(x,w)
