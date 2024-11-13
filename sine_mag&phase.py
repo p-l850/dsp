@@ -1,0 +1,16 @@
+import numpy as np
+import matplotlib.pyplot as plt
+f=float(input("Enter the frequency"))
+t=np.linspace(0,10,100)
+y=np.sin(2*np.pi*f*t)
+dft=np.fft.fft(y)
+magnitude=np.abs(dft)
+phase=np.angle(dft)
+plt.subplot(3,1,1)
+plt.plot(t,y)
+plt.subplot(3,1,2)
+plt.stem(t,magnitude)
+plt.subplot(3,1,3)
+plt.stem(t,phase)
+plt.tight_layout()
+plt.show()
